@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BlogRifka</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>BlogRifka</h1>
+
+        <nav>
+            <a href="#home">Home</a> 
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <article>
+            <h2>Microsoft Rilis AI Copilot Baru</h2>
+            <p>Tanggal: 3 April 2026</p>
+            <p>Microsoft merilis AI baru untuk Copilot agar pengguna bisa bekerja lebih cepat dan efisien.</p>
+        </article>
+
+        <article>
+            <h3>AI Dominasi Teknologi 2026</h3>
+            <p>Tanggal: 26 Maret 2026</p>
+            <p>AI semakin banyak digunakan di berbagai bidang dan menjadi teknologi utama di tahun 2026.</p>
+        </article>
+
+        <article>
+            <h3>Google Luncurkan Gemma 4</h3>
+            <p>Tanggal: 4 April 2026</p>
+            <p>Google merilis Gemma 4, AI baru yang membantu developer membuat aplikasi lebih mudah.</p>
+        </article>
+
+        <aside>
+            <h3>Artikel Terkait</h3>
+            <ul>
+                <li><a href="#">Microsoft Rilis AI Copilot Baru</a></li>
+                <li><a href="#">AI Dominasi Teknologi 2026</a></li>
+                <li><a href="#">Google Luncurkan Gemma 4</a></li>
+                
+            </ul>
+        </aside>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 BlogRifka</p>
+    </footer>
+
+</body>
+</html>
