@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .btn {
+            background-color: aqua;
+            color: orange;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: baground-color 0,3s ease,
+                        transform 0.2s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: blue;
+            transform: translateX(-10px);
+            box-shadow: 0 8px 20px black;
+            font-size: 50px;
+        }
+
+        .btn:active {
+            transform: translateX(0);
+            box-shadow: none;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-color: #1565C0;
+            background: #F0F7FF;
+            font-size: 50px;
+        }
+
+
+        .section {
+            background: white;
+            font-size: 50px;
+        }
+
+        .box {
+            width: 100px; 
+            height: 100px; 
+            background: blue;
+            transition: transform 0.4s ease;
+            display: grid;
+            place-items: center;
+        }
+
+        .box:hover {
+             transform: translate(50px, 20px); 
+        }
+
+        .box-kiri:hover { 
+            transform: translateX(-30px); 
+        }
+
+        .card:hover {
+             transform: translateY(-20px); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+        <h2>Belajar CSS Transition</h2>
+        <h3>Arahkan mouse ke button</h3>
+
+        <div class="btn">Hover</div>
+        <div class="card">card</div>
+        <div class="section"></div>
+            <h2>CSS transform</h2>
+            <div class="box">Box</div>
+        </div>
+        <div class="section">
+        </div>
+       
+    </div>
+</body>
+</html>
