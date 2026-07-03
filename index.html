@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Anggota - Kelompok 4</title>
+    <style>
+        :root {
+            --primary: #20b2aa;       
+            --primary-dark: #0f766e;
+            --primary-light: #e6f4f1;
+            --dark: #2c3e50;          
+            --light: #ffffff;
+            --bg-soft: #f8f9fa;       
+            --text-muted: #7f8c8d;    
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7fffd4, #40e0d0);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 90px 20px 40px 20px; 
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .btn-login-nav {
+            text-decoration: none;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-login-nav:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 4px 10px rgba(32, 178, 170, 0.2);
+        }
+
+        .container {
+            background-color: var(--light);
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--dark);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .deskripsi {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 20px 0 35px 0;
+            background-color: var(--bg-soft);
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .deskripsi p {
+            margin-bottom: 10px;
+        }
+        
+        .deskripsi p:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.25rem;
+            text-align: left;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #f1f8f6;
+            color: var(--dark);
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(32, 178, 170, 0.12);
+            transition: all 0.2s ease;
+        }
+
+        li:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-1px);
+            border-color: var(--primary);
+        }
+
+        .nim {
+            background-color: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* =======================================
+           FIXED RESPONSIVE CODES
+        ======================================= */
+        @media screen and (max-width: 768px) {
+            body {
+                padding-top: 110px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px;
+                text-align: center;
+            }
+            .container {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            ul li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                padding: 12px 15px;
+            }
+            .nim {
+                align-self: flex-end;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .deskripsi {
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">TUGAS<span>KELOMPOK</span></a>
+            <ul class="nav-links">
+                <li><a href="login.html" class="btn-login-nav">Login System</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Tugas Kelompok</h1>
+        <p style="color: var(--primary); font-weight: bold; font-size: 1.2rem; margin-top: 5px;">Web Server Dinamis</p>
+        
+        <div class="deskripsi">
+            <p><strong>Latar Belakang Projek:</strong> Mengubah halaman <code>index.html</code> dengan halaman yang dibuat sendiri (team), sehingga dari sisi client dapat mengakses halaman website tersebut dengan sukses via arsitektur server terintegrasi.</p>
+            <p>Berbeda dengan server statis yang hanya mengirimkan file mentah apa adanya, implementasi **Web Server Dinamis** ini melibatkan skrip pemrosesan logika di sisi backend. Hal ini memungkinkan validasi data secara *real-time*, proteksi routing, manajemen sesi pengguna (*user session*), serta pengiriman data asinkron berbasis API jembatan komunikasi jaringan.</p>
+        </div>
+        
+        <h3>Nama Anggota Kelompok:</h3>
+        <ul>
+            <li>
+                <span>Dhini Alycha Suwandi</span> 
+                <span class="nim">1125102224</span>
+            </li>
+            <li>
+                <span>Ernawati</span> 
+                <span class="nim">1125102225</span>
+            </li>
+            <li>
+                <span>Rifka Khoirinatun</span> 
+                <span class="nim">1125102233</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

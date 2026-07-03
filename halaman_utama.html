@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Utama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #14b8a6;       
+            --primary-dark: #0f766e;
+            --primary-light: #ccfbf1;
+            --dark: #0f172a;          
+            --light: #ffffff;
+            --bg-soft: #f8fafc;       
+            --text-muted: #64748b;    
+            --gradient-bg: linear-gradient(135deg, #a7f3d0, #4ade80, #2dd4bf);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: var(--gradient-bg);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            max-width: 850px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .badge-top {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(20, 184, 166, 0.2);
+        }
+
+        h1 {
+            color: var(--dark);
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            text-align: left;
+            margin: 35px 0 15px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid rgba(20, 184, 166, 0.15);
+            padding-bottom: 8px;
+        }
+
+        .deskripsi-box {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 24px;
+            border-radius: 18px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            margin-bottom: 25px;
+        }
+
+        .deskripsi-box p {
+            color: #334155;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .materi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .materi-card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+            transition: transform 0.3s ease;
+        }
+
+        .materi-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .materi-card h4 {
+            color: var(--dark);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .materi-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .grid-anggota {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .card-anggota {
+            background: var(--light);
+            padding: 16px 24px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-anggota:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 12px 20px rgba(20, 184, 166, 0.12);
+            border-color: var(--primary);
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .avatar {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .nama-peserta {
+            color: var(--dark);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .nim {
+            background: #f1f5f9;
+            color: var(--dark);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .action-area {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            padding-top: 30px;
+        }
+
+        .btn-logout {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 25px rgba(239, 68, 68, 0.3);
+        }
+
+        /* =======================================
+           FIXED RESPONSIVE CODES
+        ======================================= */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+            }
+            .deskripsi-box {
+                padding: 18px;
+            }
+            .deskripsi-box p {
+                font-size: 0.95rem;
+            }
+            .materi-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-anggota {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 16px;
+            }
+            .nim {
+                align-self: flex-end;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .btn-logout {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div style="text-align: center;">
+            <span class="badge-top">🖥️ Tugas Pemrograman Berbasis Jaringan</span>
+        </div>
+        <h1>Laporan Projek Kelompok</h1>
+        <p class="subtitle">Arsitektur & Implementasi Web Server Dinamis</p>
+        
+        <div class="deskripsi-box">
+            <p><strong>Deskripsi Projek & Pembahasan:</strong> Projek ini difokuskan pada perancangan, pem pemrosesan, dan analisis sistem jaringan komputer lokal (localhost) menggunakan model *Client-Server*. Kami berhasil mentransformasikan dokumen statis menjadi infrastruktur aplikasi dinamis terintegrasi. Server tidak sekadar bertindak sebagai penyedia file fisik biasa, melainkan aktif mengeksekusi logika pemrograman, menangani transmisi paket parameter data login via metode HTTP POST, serta menjalankan mekanisme otentikasi jaringan yang divalidasi langsung di sisi *backend* (server lingkungan terisolasi) demi menjamin keamanan data.</p>
+        </div>
+
+        <h3><span>💡</span> Detail Teknis & Konsep Arsitektur</h3>
+        <div class="materi-grid">
+            <div class="materi-card">
+                <h4><span>⚡</span> 1. HTTP Request & Response</h4>
+                <p>Mekanisme pertukaran pesan di mana klien mengirim pesan instruksi (metode GET/POST) ke alamat soket server lokal, yang kemudian dianalisis lalu dibalas dengan header protokol data status terstandarisasi (seperti status 200 OK).</p>
+            </div>
+            <div class="materi-card">
+                <h4><span>🔒</span> 2. Otentikasi Sisi Server</h4>
+                <p>Validasi kredensial login diproses sepenuhnya di dalam mesin backend. Hal ini menjamin aspek keamanan jaringan tinggi karena kode sandi tidak dapat diintip maupun dimanipulasi oleh inspeksi elemen skrip di sisi klien.</p>
+            </div>
+            <div class="materi-card">
+                <h4><span>🔑</span> 3. Manajemen Sesi (Session)</h4>
+                <p>Sebuah fitur pembatasan hak akses berbasis token enkripsi unik yang disimpan di server. Sistem ini memastikan pengguna luar tidak dapat secara ilegal melompat langsung (*bypass URL*) ke halaman utama tanpa proses verifikasi login terlebih dahulu.</p>
+            </div>
+            <div class="materi-card">
+                <h4><span>🛠️</span> 4. Rendering Konten Dinamis</h4>
+                <p>Antarmuka dibangun secara fleksibel. Server bertindak sebagai perakit halaman otomatis yang menggabungkan basis data atau logika terkini dengan kerangka dokumen sebelum dilemparkan kembali lewat jalur pipa jaringan ke browser.</p>
+            </div>
+            <div class="materi-card">
+                <h4><span>🌐</span> 5. Transportasi TCP/IP & Port</h4>
+                <p>Proses transfer berkas bersandar di atas port jaringan aktif (soket lokal) menggunakan protokol transport TCP yang menjamin pengiriman arus data berlangsung secara akurat, utuh, serta bebas dari kegagalan transmisi paket.</p>
+            </div>
+            <div class="materi-card">
+                <h4><span>🔄</span> 6. Integrasi Jaringan Asinkron</h4>
+                <p>Sistem dipersiapkan untuk mendukung jembatan komunikasi AJAX/API, yang memampukan browser memperbarui komponen informasi data internal tertentu secara parsial dan seketika tanpa perlu memuat ulang (*refresh*) dokumen secara keseluruhan.</p>
+            </div>
+        </div>
+        
+        <h3><span>👥</span> Identitas Anggota Kelompok </h3>
+        <div class="grid-anggota">
+            <div class="card-anggota">
+                <div class="profile-section">
+                    <div class="avatar">D</div>
+                    <span class="nama-peserta">Dhini Alycha Suwandi</span>
+                </div>
+                <span class="nim">1125102224</span>
+            </div>
+            
+            <div class="card-anggota">
+                <div class="profile-section">
+                    <div class="avatar">E</div>
+                    <span class="nama-peserta">Ernawati</span>
+                </div>
+                <span class="nim">1125102225</span>
+            </div>
+            
+            <div class="card-anggota">
+                <div class="profile-section">
+                    <div class="avatar">R</div>
+                    <span class="nama-peserta">Rifka Khoirinatun</span>
+                </div>
+                <span class="nim">1125102233</span>
+            </div>
+        </div>
+
+        <div class="action-area">
+            <a href="index.html" class="btn-logout">
+                <span>🚪</span> Keluar Sistem
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
