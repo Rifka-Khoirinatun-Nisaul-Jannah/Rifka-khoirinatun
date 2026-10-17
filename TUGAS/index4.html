@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Membuat Form</title>
+    <script src="assets/js/tugas4.js" defer></script>
+</head>
+<body>
+    <section class="card form-section">
+        <h2>Tambah Produk Baru</h2>
+
+        
+<form id="product-form" novalidate>
+    <table>
+        <tr>
+            <td>Nama Produk:</td>
+            <td>
+                <input type="text" id="product-name" required
+                    placeholder="Contoh: Es Krim Cokelat">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Kategori:</td>
+            <td>
+                <select id="product-category" required>
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="Es Krim">Es Krim</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Makanan">Makanan</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Harga (Rp):</td>
+            <td>
+                <input type="number" id="product-price" required
+                    min="1000" placeholder="Contoh: 10000">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Stok:</td>
+            <td>
+                <input type="number" id="product-stock" required
+                    min="0" placeholder="Contoh: 20">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="submit" class="btn btn-primary">
+                    Simpan ke Mock Data
+                </button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+        <div id="form-feedback" class="feedback-msg"></div>
+    <h3>Live Preview Produk</h3>
+        <div id="product-preview">
+            <p>Nama Produk: </p>
+            <p>Kategori: </p>
+            <p>Harga: </p>
+            <p>Stok: </p>
+        </div>
+    </section>
+</body>
+</html>
