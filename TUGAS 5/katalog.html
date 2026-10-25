@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Ice Cream</title>
+    <link rel="icon" href="data:,">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/logic.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="katalog.html" class="logo">🍦 Ice Cream</a>
+
+            <div class="nav-links">
+                <a href="katalog.html" class="active">Katalog</a>
+                <a href="formulir.html">Tambah Produk</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bagian Utama -->
+    <main class="container">
+        <section class="hero">
+            <h1>Temukan Ice Cream Favoritmu!</h1>
+            <p>Berbagai rasa lezat untuk menemani hari ceriamu.</p>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="search-section">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari nama atau kategori ice cream..."
+                aria-label="Cari produk ice cream"
+            >
+        </section>
+
+        <!-- Daftar Produk -->
+        <section class="catalog-section">
+            <h2>Katalog Produk</h2>
+
+            <div id="product-container" class="product-grid">
+
+                <!-- Produk 1 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream vanilla"
+                    >
+                    <div class="product-info">
+                        <h3>Vanilla Dream</h3>
+                        <p class="category">Kategori: Vanilla</p>
+                        <p class="price">Rp12.000</p>
+                        <button class="btn-pesan"
+                            data-product="Vanilla Dream">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 2 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream cokelat"
+                    >
+                    <div class="product-info">
+                        <h3>Chocolate Bliss</h3>
+                        <p class="category">Kategori: Cokelat</p>
+                        <p class="price">Rp15.000</p>
+                        <button class="btn-pesan"
+                            data-product="Chocolate Bliss">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 3 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream stroberi"
+                    >
+                    <div class="product-info">
+                        <h3>Strawberry Love</h3>
+                        <p class="category">Kategori: Stroberi</p>
+                        <p class="price">Rp13.000</p>
+                        <button class="btn-pesan"
+                            data-product="Strawberry Love">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 4 -->
+                <article class="product-card">
+                    <img
+                        src="https://id.pngtree.com/free-png-vectors/es-krim-matcha"
+                        alt="Ice cream matcha"
+                    >
+                    <div class="product-info">
+                        <h3>Matcha Green</h3>
+                        <p class="category">Kategori: Matcha</p>
+                        <p class="price">Rp16.000</p>
+                        <button class="btn-pesan"
+                            data-product="Matcha Green">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 5 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream blueberry"
+                    >
+                    <div class="product-info">
+                        <h3>Blueberry Pop</h3>
+                        <p class="category">Kategori: Blueberry</p>
+                        <p class="price">Rp14.000</p>
+                        <button class="btn-pesan"
+                            data-product="Blueberry Pop">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 6 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1517093157656-b9eccef1a7d2?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream cookies and cream"
+                    >
+                    <div class="product-info">
+                        <h3>Cookies Cream</h3>
+                        <p class="category">Kategori: Cookies</p>
+                        <p class="price">Rp17.000</p>
+                        <button class="btn-pesan"
+                            data-product="Cookies Cream">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 7 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream mangga"
+                    >
+                    <div class="product-info">
+                        <h3>Mango Sunshine</h3>
+                        <p class="category">Kategori: Mangga</p>
+                        <p class="price">Rp12.000</p>
+                        <button class="btn-pesan"
+                            data-product="Mango Sunshine">Pesan</button>
+                    </div>
+                </article>
+
+                <!-- Produk 8 -->
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80"
+                        alt="Ice cream karamel"
+                    >
+                    <div class="product-info">
+                        <h3>Caramel Crunch</h3>
+                        <p class="category">Kategori: Karamel</p>
+                        <p class="price">Rp18.000</p>
+                        <button class="btn-pesan"
+                            data-product="Caramel Crunch">Pesan</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="emptyMessage" hidden>
+                Produk tidak ditemukan.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Ice Cream. Semua hak dilindungi.</p>
+    </footer>
+
+</body>
+</html>
