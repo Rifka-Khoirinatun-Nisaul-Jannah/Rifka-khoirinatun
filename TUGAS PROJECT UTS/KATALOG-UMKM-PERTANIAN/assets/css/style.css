@@ -1,0 +1,277 @@
+
+/* Tampilan dasar halaman */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5e9;
+    color: #263b2b;
+    line-height: 1.6;
+}
+
+/* Bagian header */
+header {
+    background-color: #315c3b;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Menu navigasi */
+nav {
+    background-color: #24472d;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #315c3b;
+    color: #dce8b5;
+}
+
+/* Bagian utama */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+/* Kotak setiap bagian */
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid #e0e6dc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(36, 71, 45, 0.06);
+}
+
+/* Judul bagian */
+h2 {
+    color: #315c3b;
+    margin-top: 0;
+}
+
+h3 {
+    color: #315c3b;
+}
+
+/* Label formulir */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Input dan pilihan kategori */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccd5c8;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: white;
+    color: #263b2b;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #315c3b;
+    box-shadow: 0 0 0 3px rgba(49, 92, 59, 0.12);
+}
+
+/* Tombol */
+button,
+.tombol {
+    display: inline-block;
+    background-color: #315c3b;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover,
+.tombol:hover {
+    background-color: #24472d;
+    transform: translateY(-2px);
+}
+
+/* Daftar produk */
+#daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+/* Card produk tanpa gambar */
+.kartu-produk {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: white;
+    border: 1px solid #d7dfd2;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(36, 71, 45, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                opacity 0.3s ease;
+}
+
+/* Efek ketika card disentuh mouse */
+.kartu-produk:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(36, 71, 45, 0.15);
+}
+
+/* Nama produk */
+.kartu-produk h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* Informasi produk */
+.kartu-produk p {
+    margin: 6px 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Tombol dalam card */
+.kartu-produk button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Tombol hapus */
+.kartu-produk .btn-hapus {
+    background-color: #b42318;
+}
+
+.kartu-produk .btn-hapus:hover {
+    background-color: #8f1d14;
+}
+
+/* Fokus saat menggunakan keyboard */
+button:focus-visible,
+nav a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+.tombol:focus-visible {
+    outline: 3px solid #71834b;
+    outline-offset: 3px;
+}
+
+/* Tombol saat ditekan */
+button:active,
+.tombol:active {
+    transform: translateY(0);
+}
+
+/* Efek menghilang saat produk dihapus */
+.kartu-produk.menghilang {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+/* Pesan formulir */
+#pesan-form {
+    font-weight: bold;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Bagian bawah website */
+footer {
+    background-color: #24472d;
+    color: white;
+    text-align: center;
+    padding: 18px 15px;
+    margin-top: 25px;
+}
+
+/* Tampilan tablet */
+@media (max-width: 800px) {
+    #daftar-produk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 520px) {
+    header {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 10px;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 15px 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #daftar-produk {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .kartu-produk {
+        padding: 17px;
+    }
+}

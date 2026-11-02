@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UMKM Pertanian</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Katalog UMKM Pertanian</h1>
+        <p>Silakan login untuk melanjutkan.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Login</a>
+        <a href="katalog.html">Katalog Produk</a>
+        <a href="tambah-produk.html">Tambah Produk</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Login</h2>
+
+            <form id="form-login">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Masukkan username"
+                    required
+                >
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+                <button type="submit">Login</button>
+                <p id="pesan-login"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katalog UMKM Pertanian</p>
+    </footer>
+
+    <script>
+        const formLogin = document.querySelector("#form-login");
+        const pesanLogin = document.querySelector("#pesan-login");
+
+        formLogin.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.querySelector("#username").value;
+            const password = document.querySelector("#password").value;
+
+            if (username === "admin" && password === "12345") {
+                pesanLogin.textContent = "Login berhasil!";
+                pesanLogin.style.color = "green";
+
+                setTimeout(function() {
+                    window.location.href = "katalog.html";
+                }, 1000);
+            } else {
+                pesanLogin.textContent = "Username atau password salah!";
+                pesanLogin.style.color = "red";
+            }
+        });
+    </script>
+
+</body>
+</html>

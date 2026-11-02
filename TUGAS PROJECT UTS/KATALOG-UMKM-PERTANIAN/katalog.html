@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - UMKM Pertanian</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Katalog Produk Pertanian</h1>
+        <p>Lihat berbagai produk pertanian lokal.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="katalog.html">Katalog Produk</a>
+        <a href="tambah-produk.html">Tambah Produk</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Daftar Produk</h2>
+
+            <label for="search">Cari Produk</label>
+            <input
+                type="text"
+                id="search"
+                placeholder="Masukkan nama produk..."
+            >
+
+            <label for="filter-kategori">Pilih Kategori</label>
+            <select id="filter-kategori">
+                <option value="">Semua Kategori</option>
+            </select>
+
+            <div id="daftar-produk"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katalog UMKM Pertanian</p>
+    </footer>
+
+</body>
+</html>

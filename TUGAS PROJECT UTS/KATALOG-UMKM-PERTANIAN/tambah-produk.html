@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Produk - UMKM Pertanian</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Tambah Produk Pertanian</h1>
+        <p>Masukkan data produk UMKM kamu.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="katalog.html">Katalog Produk</a>
+        <a href="tambah-produk.html">Tambah Produk</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Form Produk</h2>
+
+            <form id="form-tambah">
+                <label for="nama">Nama Produk</label>
+                <input type="text" id="nama" name="nama">
+
+                <label for="kategori">Kategori</label>
+                <select id="kategori" name="kategori">
+                    <option value="">Pilih Kategori</option>
+                    <option value="Sayuran">Sayuran</option>
+                    <option value="Buah-buahan">Buah-buahan</option>
+                    <option value="Beras">Beras</option>
+                    <option value="Palawija">Palawija</option>
+                </select>
+
+                <label for="harga">Harga Produk (Rp)</label>
+                <input type="number" id="harga" name="harga">
+
+                <label for="stok">Stok Produk</label>
+                <input type="number" id="stok" name="stok">
+
+                <button type="submit">Tambah Produk</button>
+                <p id="pesan-form"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katalog UMKM Pertanian</p>
+    </footer>
+
+</body>
+</html>
